@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CyberGrid Controller · User Administration</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/common.js" defer></script>
+    <script src="js/admin.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>User Administration</h1>
+        <p id="subtitle">Manage operator, analyst, and viewer access to the platform.</p>
+      </header>
+
+      <nav id="primary-nav" class="primary-nav hidden"></nav>
+      <section id="message-area" class="notice hidden"></section>
+
+      <section id="session-panel" class="panel hidden">
+        <div class="session-details">
+          <div>
+            Logged in as <strong id="current-user-name"></strong>
+            <span class="role-badge" id="current-user-role"></span>
+          </div>
+          <button id="logout-btn" class="secondary">Sign Out</button>
+        </div>
+      </section>
+
+      <section id="user-admin-panel" class="panel hidden">
+        <div class="section-header">
+          <h2>Directory</h2>
+        </div>
+        <form id="user-create-form" class="inline-form">
+          <input type="text" id="new-username" placeholder="username" required />
+          <input type="password" id="new-password" placeholder="temporary password" required />
+          <select id="new-role" required></select>
+          <button type="submit">Create User</button>
+        </form>
+        <table id="user-table">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="user-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

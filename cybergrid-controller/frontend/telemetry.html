@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CyberGrid Controller · Telemetry</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/telemetry.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Live Telemetry</h1>
+        <p id="subtitle">Visualize voltage and frequency across microgrid assets.</p>
+      </header>
+
+      <nav id="primary-nav" class="primary-nav hidden"></nav>
+      <section id="message-area" class="notice hidden"></section>
+
+      <section id="session-panel" class="panel hidden">
+        <div class="session-details">
+          <div>
+            Logged in as <strong id="current-user-name"></strong>
+            <span class="role-badge" id="current-user-role"></span>
+          </div>
+          <button id="logout-btn" class="secondary">Sign Out</button>
+        </div>
+      </section>
+
+      <section id="telemetry-panel" class="panel hidden">
+        <div class="section-header">
+          <h2>Streaming Metrics</h2>
+          <div class="section-actions">
+            <button id="toggle-telemetry" class="secondary">Pause Live Telemetry</button>
+          </div>
+        </div>
+        <p id="telemetry-status" class="meta-text"></p>
+        <div class="chart-container">
+          <canvas id="telemetry-chart" height="180"></canvas>
+        </div>
+        <table id="telemetry-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Voltage (V)</th>
+              <th>Frequency (Hz)</th>
+              <th>Status</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody id="telemetry-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

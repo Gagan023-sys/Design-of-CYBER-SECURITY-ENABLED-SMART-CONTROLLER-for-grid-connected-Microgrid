@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CyberGrid Controller · Security Operations</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/common.js" defer></script>
+    <script src="js/security.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Security Operations</h1>
+        <p id="subtitle">Track IDS/IPS events and exercise the response playbooks.</p>
+      </header>
+
+      <nav id="primary-nav" class="primary-nav hidden"></nav>
+      <section id="message-area" class="notice hidden"></section>
+
+      <section id="session-panel" class="panel hidden">
+        <div class="session-details">
+          <div>
+            Logged in as <strong id="current-user-name"></strong>
+            <span class="role-badge" id="current-user-role"></span>
+          </div>
+          <button id="logout-btn" class="secondary">Sign Out</button>
+        </div>
+      </section>
+
+      <section id="alerts-panel" class="panel hidden">
+        <div class="section-header">
+          <h2>Security Event Feed</h2>
+          <div class="section-actions">
+            <button id="refresh-alerts" class="secondary">Refresh Now</button>
+          </div>
+        </div>
+        <table id="alerts-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Severity</th>
+              <th>Category</th>
+              <th>Component</th>
+              <th>Details</th>
+              <th>Mitigation</th>
+            </tr>
+          </thead>
+          <tbody id="alerts-table-body"></tbody>
+        </table>
+      </section>
+
+      <section id="attack-panel" class="panel hidden">
+        <div class="section-header">
+          <h2>Attack Simulation</h2>
+        </div>
+        <form id="attack-form" class="inline-form">
+          <select id="attack-type">
+            <option value="dos">Denial of Service</option>
+            <option value="spoof">Telemetry Spoofing</option>
+            <option value="malware">Malware Injection</option>
+            <option value="generic">Generic Anomaly</option>
+          </select>
+          <input type="text" id="attack-component" placeholder="target component (optional)" />
+          <button type="submit">Launch Simulation</button>
+        </form>
+        <p class="meta-text">
+          Simulated incidents populate the event feed with mitigation notes to verify IPS workflows.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

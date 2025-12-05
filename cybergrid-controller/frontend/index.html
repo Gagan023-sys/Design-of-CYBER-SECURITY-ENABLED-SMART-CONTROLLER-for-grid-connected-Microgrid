@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CyberGrid Controller · Overview</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/common.js" defer></script>
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>CyberGrid Controller</h1>
+        <p id="subtitle">Monitor microgrid health and security posture.</p>
+      </header>
+
+      <nav id="primary-nav" class="primary-nav hidden"></nav>
+
+      <section id="message-area" class="notice hidden"></section>
+
+      <section id="login-panel" class="panel">
+        <h2>Authenticate</h2>
+        <form id="login-form">
+          <div class="field">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="operator" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" required />
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <p id="login-status" class="meta-text"></p>
+      </section>
+
+      <section id="session-panel" class="panel hidden">
+        <div class="session-details">
+          <div>
+            Logged in as <strong id="current-user-name"></strong>
+            <span class="role-badge" id="current-user-role"></span>
+          </div>
+          <button id="logout-btn" class="secondary">Sign Out</button>
+        </div>
+      </section>
+
+      <section id="summary-panel" class="panel hidden">
+        <div class="section-header">
+          <h2>Grid Activity Snapshot</h2>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-card">
+            <span class="stat-label">Users</span>
+            <span class="stat-value" id="summary-users">—</span>
+          </div>
+          <div class="summary-card">
+            <span class="stat-label">Components</span>
+            <span class="stat-value" id="summary-components">—</span>
+          </div>
+          <div class="summary-card">
+            <span class="stat-label">Telemetry Points</span>
+            <span class="stat-value" id="summary-telemetry">—</span>
+          </div>
+          <div class="summary-card">
+            <span class="stat-label">Security Events</span>
+            <span class="stat-value" id="summary-alerts">—</span>
+          </div>
+        </div>
+        <div class="recent-activity">
+          <h3>Most Recent Alerts</h3>
+          <ul id="recent-alerts" class="recent-list"></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "inverter-01",
+    "telemetry": {
+      "voltage": 240.4,
+      "frequency": 59.9,
+      "status": "online",
+      "power_kw": 125.3,
+      "failed_logins": 0
+    },
+    "metadata": {
+      "firmware": "1.3.0",
+      "last_patch": "2025-09-10",
+      "ip_address": "10.0.0.21"
+    }
+  },
+  {
+    "name": "bess-02",
+    "telemetry": {
+      "voltage": 237.2,
+      "frequency": 60.1,
+      "status": "online",
+      "soc": 82.4,
+      "failed_logins": 1
+    },
+    "metadata": {
+      "firmware": "4.2.1",
+      "last_patch": "2025-08-02",
+      "ip_address": "10.0.0.42"
+    }
+  },
+  {
+    "name": "switch-03",
+    "telemetry": {
+      "voltage": 0,
+      "frequency": 0,
+      "status": "offline",
+      "failed_logins": 7
+    },
+    "metadata": {
+      "firmware": "2.1.5",
+      "last_patch": "2025-01-18",
+      "ip_address": "10.0.0.55"
+    }
+  },
+  {
+    "name": "pv-array-04",
+    "telemetry": {
+      "voltage": 262.8,
+      "frequency": 61.9,
+      "status": "online",
+      "irradiance": 870,
+      "failed_logins": 0
+    },
+    "metadata": {
+      "firmware": "3.8.4",
+      "last_patch": "2025-10-21",
+      "ip_address": "10.0.0.77"
+    }
+  }
+]
+
